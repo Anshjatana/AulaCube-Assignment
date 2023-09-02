@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './App.css';
-import PostList from './components/PostList';
-import CommentList from './components/CommentList';
+import React, { useState } from "react";
+import "./App.css";
+import PostList from "./components/PostList";
+import CommentList from "./components/CommentList";
 
 function App() {
   const [selectedPostId, setSelectedPostId] = useState(null);

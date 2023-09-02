@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function CommentList({ postId }) {
   const [comments, setComments] = useState([]);
@@ -10,17 +10,20 @@ function CommentList({ postId }) {
         setComments(data);
       })
       .catch((error) => {
-        console.error('Error fetching comments:', error);
+        console.error("Error fetching comments:", error);
       });
   }, [postId]);
 
   return (
     <div className="comment-list p-10 bg-[#dab5da] text-black ">
-      <h2 className='font-bold text-[25px] uppercase my-10'>Comments for Post #{postId}</h2>
+      <h2 className="font-bold text-[25px] uppercase my-10">
+        Comments for Post #{postId}
+      </h2>
       <ul>
         {comments.map((comment) => (
-          <li key={comment.id} className='font-medium my-6'>-{comment.body}
-          <strong>{" "}By: {comment.email}</strong>
+          <li key={comment.id} className="font-medium my-6">
+            -{comment.body}
+            <strong> By: {comment.email}</strong>
           </li>
         ))}
       </ul>
